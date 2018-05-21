@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "##' plot GO graph\n##'\n##'\n##' @title plotGOgraph\n##' @param x output of enrichGO or gseGO\n##' @param firstSigNodes number of significant nodes (retangle nodes in the graph)\n##' @param useInfo additional info\n##' @param sigForAll if TRUE the score/p-value of all nodes in the DAG is shown, otherwise only score will be shown\n##' @param useFullNames logical\n##' @param ... additional parameter of showSigOfNodes, please refer to topGO\n##' @return GO DAG graph\n## @importClassesFrom topGO topGOdata\n## @importFrom topGO showSigOfNodes\n## @importFrom topGO annFUN.gene2GO\n## @importFrom topGO groupGOTerms\n##' @export\n##' @seealso\n##' \\link[topGO]{showSigOfNodes}\n##' @author Guangchuang Yu\nplotGOgraph <- function(x,\n                        firstSigNodes=10,\n                        useInfo=\"all\",\n                        sigForAll=TRUE,\n                        useFullNames=TRUE, ...) {\n\n    ## requireNamespace(\"topGO\") || stop(\"package topGO is required\")\n    groupGOTerms <- get_fun_from_pkg(\"topGO\", \"groupGOTerms\")\n    annFUN.gene2GO <- get_fun_from_pkg(\"topGO\", \"annFUN.gene2GO\")\n    showSigOfNodes <- get_fun_from_pkg(\"topGO\", \"showSigOfNodes\")\n\n    if (! class(x) %in% c(\"gseaResult\", \"enrichResult\")) {\n        stop(\"x should be output of gseGO or enrichGO...\")\n    }\n\n    gs <- x@geneSets\n    gs.df <- data.frame(gene = unlist(gs),\n                        go   = rep(names(gs),\n                                   times=sapply(gs, length)))\n    gene2GO <- split(as.character(gs.df$go), gs.df$gene)\n\n    if (is(x, \"gseaResult\")) {\n        ont <- x@setType\n        allgenes <- x@geneList\n        core_genes <- unique(unlist(geneInCategory(x)))\n        allgenes[!names(allgenes) %in% core_genes] <- -1\n        allgenes[core_genes] <- 1\n    } else {\n        ont <- x@ontology\n        universe <- x@universe\n        allgenes <- numeric(length(universe))\n        names(allgenes) <- universe\n        allgenes[x@gene] <- 1\n    }\n\n    selector <- function(scores) return(scores == 1)\n\n    if ( ! ont %in% c(\"BP\", \"MF\", \"CC\")) {\n        stop(\"ontology should be one of 'BP', 'MF' or 'CC'...\")\n    }\n\n\n    pvalue <- x@result$p.adjust\n    names(pvalue) <- x@result$ID\n\n    groupGOTerms()\n\n    GOdata <- new(\"topGOdata\",\n                  description=\"clusterProfiler enrichment results\",\n                  ontology = ont,\n                  allGenes = allgenes,\n                  geneSel = selector,\n                  annot = annFUN.gene2GO,\n                  gene2GO=gene2GO)\n\n    firstSigNodes <- min(firstSigNodes, nrow(x))\n    showSigOfNodes(GOdata        = GOdata,\n                   termsP.value  = pvalue,\n                   firstSigNodes = firstSigNodes,\n                   useInfo       = useInfo,\n                   sigForAll     = sigForAll,\n                   useFullNames  = useFullNames,\n                   ...)\n}\n\n",
+    "created" : 1526893825873.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1788219357",
+    "id" : "72A0CB80",
+    "lastKnownWriteTime" : 1526893609,
+    "last_content_update" : 1526893609,
+    "path" : "C:/RFactory/clusterProfiler/R/plotGOgraph.R",
+    "project_path" : "R/plotGOgraph.R",
+    "properties" : {
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

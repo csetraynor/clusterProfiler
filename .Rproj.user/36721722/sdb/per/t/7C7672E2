@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "#' statistical analysis and visualization of functional profiles for genes and\n#' gene clusters\n#' The package implements methods to analyze and visualize functional profiles\n#' of gene and gene clusters.\n#'\n#' @name clusterProfiler-package\n#' @aliases clusterProfiler-package clusterProfiler\n#' @docType package\nNULL\n\n\n\n#' Datasets\n#' gcSample contains a sample of gene clusters.\n#'\n#'\n#' @name DataSet\n#' @aliases gcSample\n#' @docType data\n#' @keywords datasets\nNULL\n\n#' Datasets\n#' kegg_species contains kegg species information\n#'\n#'\n#' @name DataSet\n#' @aliases kegg_species\n#' @docType data\n#' @keywords datasets\nNULL\n\n\n",
+    "created" : 1526893695229.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "110754611",
+    "id" : "7C7672E2",
+    "lastKnownWriteTime" : 1526893609,
+    "last_content_update" : 1526893609,
+    "path" : "C:/RFactory/clusterProfiler/R/clusterProfiler-package.R",
+    "project_path" : "R/clusterProfiler-package.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

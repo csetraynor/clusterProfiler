@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "##' @importMethodsFrom DOSE show\n##' @importMethodsFrom DOSE summary\n\n##' @importFrom DOSE geneID\n##' @export\nDOSE::geneID\n\n##' @importFrom DOSE geneInCategory\n##' @export\nDOSE::geneInCategory\n\nbuild_Anno <- DOSE:::build_Anno\nget_organism <- DOSE:::get_organism\n\n",
+    "created" : 1526893663410.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "274691995",
+    "id" : "23555429",
+    "lastKnownWriteTime" : 1526893609,
+    "last_content_update" : 1526893609,
+    "path" : "C:/RFactory/clusterProfiler/R/DOSE.R",
+    "project_path" : "R/DOSE.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

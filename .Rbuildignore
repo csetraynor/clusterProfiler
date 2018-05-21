@@ -12,3 +12,5 @@ mkdocs
 docs
 .github
 site_src
+^.*\.Rproj$
+^\.Rproj\.user$
