@@ -1,0 +1,8 @@
+"0","data(geneList, package=""DOSE"")"
+"0","gene <- names(geneList)[abs(geneList) > 2]"
+"0","gene.df <- bitr(gene, fromType = ""ENTREZID"","
+"0","	   	toType = c(""ENSEMBL"", ""SYMBOL""),"
+"0","		OrgDb = org.Hs.eg.db)"
+"2","'select()' returned 1:many mapping between keys and columns
+"
+"0","head(gene.df)"

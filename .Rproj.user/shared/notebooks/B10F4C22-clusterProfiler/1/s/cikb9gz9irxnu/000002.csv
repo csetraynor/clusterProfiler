@@ -1,0 +1,7 @@
+"0","ego2 <- enrichGO(gene         = gene.df$ENSEMBL,"
+"0","                OrgDb         = org.Hs.eg.db,"
+"0","                keyType       = 'ENSEMBL',"
+"0","                ont           = ""CC"","
+"0","                pAdjustMethod = ""BH"","
+"0","                pvalueCutoff  = 0.01,"
+"0","                qvalueCutoff  = 0.05)"

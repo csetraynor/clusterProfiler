@@ -1,0 +1,4 @@
+"0","bitr_kegg(""Z5100"", fromType=""kegg"", toType='ncbi-geneid', organism='ece')"
+"2","Error in KEGG_convert(fromType, toType, organism) : 
+  ncbi-geneid is not supported for ece ...
+"

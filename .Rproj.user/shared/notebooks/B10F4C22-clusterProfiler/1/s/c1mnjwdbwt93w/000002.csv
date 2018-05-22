@@ -1,0 +1,9 @@
+"0","library(DOSE)"
+"0","library(GO.db)"
+"0","library(org.Hs.eg.db)"
+"0","library(GSEABase)"
+"2","package �XML� was built under R version 3.4.3"
+"0","library(clusterProfiler)"
+"2","Error: package or namespace load failed for ‘clusterProfiler’:
+ object ‘dotplot’ is not exported by 'namespace:DOSE'
+"

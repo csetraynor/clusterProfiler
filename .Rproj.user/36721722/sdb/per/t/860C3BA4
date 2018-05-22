@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "C1 <- qusage::read.gmt(\"C:/RFactory/predsurv/vignettes/Gene sets/c1.all.v6.1.entrez.gmt\")\ngene_names <- readRDS(\"C:/RFactory/Rdata_brca/gene_names.RDS\")\n\nmatch(\"GATA3\", gene_names$Hugo_Symbol)\n\ngene_names$Entrez_Gene_Id[match(\"GATA3\", gene_names$Hugo_Symbol)]\n\nmg <- function(x){\n  gene_names$Entrez_Gene_Id[match(x, gene_names$Hugo_Symbol)]\n}\n\n\nintClust1 <- unique(c(C1$chr17q23, mg(\"GATA3\")  , mg(\"RPS6KB1\") , mg(\"PPM1D,\"), mg(\"PTRH2\"), mg(\"APPBP2\") ) )\n\nintClust1 <-intClust1[!is.na(intClust1)]\n\nintClust2 <- unique(c( C1$chr11q13, C1$chr11q14, mg(\"CCND1\")  ,mg(\"EMSY\")  ,mg(\"PAK1\") ) )\nintClust2 <-intClust2[!is.na(intClust2)]\n\n\nintClustGO <- list(intClust1,intClust2 )\n",
+    "created" : 1527012127621.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1760105558",
+    "id" : "860C3BA4",
+    "lastKnownWriteTime" : 1527013558,
+    "last_content_update" : 1527013558255,
+    "path" : "C:/RFactory/clusterProfiler/vignettes/iclust_ontology.R",
+    "project_path" : "vignettes/iclust_ontology.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

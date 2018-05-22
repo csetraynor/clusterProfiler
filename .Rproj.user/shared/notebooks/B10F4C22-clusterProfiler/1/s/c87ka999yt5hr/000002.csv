@@ -1,0 +1,4 @@
+"0","kk <- enrichKEGG(gene         = gene,"
+"0","                 organism     = 'hsa',"
+"0","                 pvalueCutoff = 0.05)"
+"0","head(kk)"

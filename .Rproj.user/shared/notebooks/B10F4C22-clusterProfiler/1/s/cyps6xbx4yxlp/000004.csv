@@ -1,0 +1,6 @@
+"0","ggo <- groupGO(gene     = gene,"
+"0","               OrgDb    = org.Hs.eg.db,"
+"0","               ont      = ""CC"","
+"0","               level    = 3,"
+"0","               readable = TRUE)"
+"0","head(ggo)"

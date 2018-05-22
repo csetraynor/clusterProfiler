@@ -1,0 +1,11 @@
+"0","x <- c(""GPX3"",  ""GLRX"",   ""LBP"",   ""CRYAB"", ""DEFB1"", ""HCLS1"",   ""SOD2"",   ""HSPA2"","
+"0","       ""ORM1"",  ""IGFBP1"", ""PTHLH"", ""GPC3"",  ""IGFBP3"",""TOB1"",    ""MITF"",   ""NDRG1"","
+"0","       ""NR1H4"", ""FGFR3"",  ""PVR"",   ""IL6"",   ""PTPRM"", ""ERBB2"",   ""NID2"",   ""LAMB1"","
+"0","       ""COMP"",  ""PLS3"",   ""MCAM"",  ""SPP1"",  ""LAMC1"", ""COL4A2"",  ""COL4A1"", ""MYOC"","
+"0","       ""ANXA4"", ""TFPI2"",  ""CST6"",  ""SLPI"",  ""TIMP2"", ""CPM"",     ""GGT1"",   ""NNMT"","
+"0","       ""MAL"",   ""EEF1A2"", ""HGD"",   ""TCN2"",  ""CDA"",   ""PCCA"",    ""CRYM"",   ""PDXK"","
+"0","       ""STC1"",  ""WARS"",  ""HMOX1"", ""FXYD2"", ""RBP4"",   ""SLC6A12"", ""KDELR3"", ""ITM2B"")"
+"0","eg = bitr(x, fromType=""SYMBOL"", toType=""ENTREZID"", OrgDb=""org.Hs.eg.db"")"
+"2","'select()' returned 1:1 mapping between keys and columns
+"
+"0","head(eg)"

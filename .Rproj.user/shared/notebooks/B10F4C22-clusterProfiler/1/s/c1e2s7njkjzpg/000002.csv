@@ -1,0 +1,4 @@
+"0","ids <- bitr(x, fromType=""SYMBOL"", toType=c(""UNIPROT"", ""ENSEMBL""), OrgDb=""org.Hs.eg.db"")"
+"2","'select()' returned 1:many mapping between keys and columns
+"
+"0","head(ids)"

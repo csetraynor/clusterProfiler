@@ -1,0 +1,8 @@
+"0","ego3 <- gseGO(geneList     = geneList,"
+"0","              OrgDb        = org.Hs.eg.db,"
+"0","              ont          = ""CC"","
+"0","              nPerm        = 1000,"
+"0","              minGSSize    = 100,"
+"0","              maxGSSize    = 500,"
+"0","              pvalueCutoff = 0.05,"
+"0","              verbose      = FALSE)"

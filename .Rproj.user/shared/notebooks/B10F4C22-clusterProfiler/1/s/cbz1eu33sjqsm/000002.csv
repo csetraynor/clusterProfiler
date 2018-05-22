@@ -1,0 +1,7 @@
+"0","kk2 <- gseKEGG(geneList     = geneList,"
+"0","               organism     = 'hsa',"
+"0","               nPerm        = 1000,"
+"0","               minGSSize    = 120,"
+"0","               pvalueCutoff = 0.05,"
+"0","               verbose      = FALSE)"
+"0","head(kk2)"
